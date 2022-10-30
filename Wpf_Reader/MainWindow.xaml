@@ -1,0 +1,25 @@
+﻿<Window x:Class="Wpf_Reader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Reader"
+        mc:Ignorable="d"
+        Title="MainWindow" FontSize="25" Height="450" Width="400">
+    <!--<StackPanel>
+        <TextBox x:Name="FileName">test.txt</TextBox>
+        <Button Click="Button_Click">Start</Button>
+        <Label x:Name="Result">0</Label>
+        <Button>Test</Button>
+        <TextBox></TextBox>
+    </StackPanel>-->
+
+    <StackPanel>
+        <TextBox Text="{Binding FileName}"></TextBox>
+        <Button Command="{Binding StartCommand}">Start</Button>
+        <Label>Last result:</Label>
+        <Label Content="{Binding Result}"></Label>
+        <Label>List result:</Label>
+        <ListBox ItemsSource="{Binding ResultsList}"></ListBox>
+    </StackPanel>
+</Window>
